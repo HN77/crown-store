@@ -3,9 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UserProvider } from './contexts/user.context';
+import { ProductsProvider } from './contexts/product.context';
+import { CartProvider } from './contexts/cart.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <UserProvider>
+        <ProductsProvider>
+            <CartProvider>
+                <App />
+            </CartProvider>
+        </ProductsProvider>
+    </UserProvider>
+);
 
 // ReactDOM.render(
 //     <React.StrictMode>

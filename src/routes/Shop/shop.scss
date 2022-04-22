@@ -1,0 +1,12 @@
+.shop-container {
+    width: 89%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 3rem;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
